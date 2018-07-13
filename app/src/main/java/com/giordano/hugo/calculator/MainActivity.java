@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ((CalculatorApplication)getApplication()).getAppComponent().inject(this);
+        ((CalculatorApplication)getApplication()).getAppComponent().mainComponent().build().inject(this);
     }
 
     @Override

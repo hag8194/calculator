@@ -4,13 +4,15 @@ import dagger.BindsInstance;
 import dagger.Component;
 import com.giordano.hugo.calculator.CalculatorApplication;
 import com.giordano.hugo.calculator.MainActivity;
+import com.giordano.hugo.calculator.MainComponent;
 
 import javax.inject.Singleton;
 
 @Singleton
 @Component(modules = AppModule.class)
 public interface AppComponent {
-    void inject(MainActivity activity);
+
+    MainComponent.Builder mainComponent();
 
     @Component.Builder
     interface Builder {
