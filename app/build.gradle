@@ -16,13 +16,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Support Library
     implementation 'com.android.support:appcompat-v7:28.0.0-alpha3'
     implementation 'com.android.support:design:28.0.0-alpha3'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+
+    //Butterknife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     //Room
     implementation "android.arch.persistence.room:runtime:1.1.1"
@@ -34,8 +44,8 @@ dependencies {
     annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
 
     //Dagger2
-    implementation 'com.google.dagger:dagger:2.11'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+    implementation 'com.google.dagger:dagger:2.13'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.13'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

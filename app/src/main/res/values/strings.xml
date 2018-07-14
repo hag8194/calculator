@@ -1,22 +1,42 @@
 <resources>
     <string name="app_name">Calculator</string>
-    <string name="cancel">C</string>
-    <string name="sign">+/-</string>
-    <string name="percent">%</string>
-    <string name="divide">÷</string>
-    <string name="seven">7</string>
-    <string name="eight">8</string>
-    <string name="nine">9</string>
-    <string name="multiply">×</string>
-    <string name="four">4</string>
-    <string name="five">5</string>
-    <string name="six">6</string>
-    <string name="subtract">-</string>
-    <string name="two">2</string>
-    <string name="three">3</string>
-    <string name="one">1</string>
-    <string name="plus">+</string>
-    <string name="zero">0</string>
-    <string name="decimal">.</string>
-    <string name="equal">=</string>
+    <string name="cancel" translatable="false">C</string>
+    <string name="percent" translatable="false">%</string>
+    <string name="divide" translatable="false">÷</string>
+    <string name="seven" translatable="false">7</string>
+    <string name="eight" translatable="false">8</string>
+    <string name="nine" translatable="false">9</string>
+    <string name="multiply" translatable="false">×</string>
+    <string name="four" translatable="false">4</string>
+    <string name="five" translatable="false">5</string>
+    <string name="six" translatable="false">6</string>
+    <string name="subtract" translatable="false">-</string>
+    <string name="two" translatable="false">2</string>
+    <string name="three" translatable="false">3</string>
+    <string name="one" translatable="false">1</string>
+    <string name="plus" translatable="false">+</string>
+    <string name="zero" translatable="false">0</string>
+    <string name="decimal" translatable="false">.</string>
+    <string name="equal" translatable="false">=</string>
+
+    <string-array name="numbers">
+        <item>@string/zero</item>
+        <item>@string/one</item>
+        <item>@string/two</item>
+        <item>@string/three</item>
+        <item>@string/four</item>
+        <item>@string/five</item>
+        <item>@string/six</item>
+        <item>@string/seven</item>
+        <item>@string/eight</item>
+        <item>@string/nine</item>
+    </string-array>
+
+    <string-array name="operators">
+        <item>@string/plus</item>
+        <item>@string/subtract</item>
+        <item>@string/multiply</item>
+        <item>@string/divide</item>
+        <item>@string/percent</item>
+    </string-array>
 </resources>

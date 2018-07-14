@@ -5,72 +5,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".MainActivity"
+    tools:context=".main.MainActivity"
     tools:layout_editor_absoluteX="16dp"
     tools:layout_editor_absoluteY="25dp">
 
     <TextView
-        android:id="@+id/editText7"
+        android:id="@+id/operation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/app_name"
+        android:fontFamily="@font/roboto_mono_light"
+        android:textAlignment="textEnd"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText6"
-        app:layout_constraintEnd_toEndOf="@+id/editText6"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/operation_input"
+        app:layout_constraintEnd_toEndOf="@+id/operation_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2+2" />
 
     <TextView
-        android:id="@+id/editText6"
+        android:id="@+id/operation_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginTop="8dp"
-        android:text="@string/app_name"
+        android:fontFamily="@font/roboto_mono_light"
+        android:scrollbars="none"
+        android:textAlignment="textEnd"
         android:textColor="@android:color/white"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operation"
+        tools:text="4+6" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:background="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText6">
+        app:layout_constraintTop_toBottomOf="@+id/operation_input">
 
         <Button
             android:id="@+id/cancel"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/cancel"
             android:textColor="@android:color/white"
             android:textSize="30sp"
             app:layout_constraintBottom_toTopOf="@+id/seven"
-            app:layout_constraintEnd_toStartOf="@+id/sign"
+            app:layout_constraintEnd_toStartOf="@+id/percent"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/sign"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/sign"
-            android:textColor="@android:color/white"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toTopOf="@+id/eight"
-            app:layout_constraintEnd_toStartOf="@+id/percent"
-            app:layout_constraintStart_toEndOf="@+id/cancel"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
@@ -78,12 +73,13 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/percent"
             android:textColor="@android:color/white"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/nine"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/eight"
             app:layout_constraintEnd_toStartOf="@+id/divide"
-            app:layout_constraintStart_toEndOf="@+id/sign"
+            app:layout_constraintStart_toEndOf="@+id/cancel"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
@@ -91,12 +87,26 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/divide"
             android:textColor="@android:color/white"
-            android:textSize="30sp"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/nine"
+            app:layout_constraintEnd_toStartOf="@+id/backspace"
+            app:layout_constraintStart_toEndOf="@+id/percent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/backspace"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_backspace_black_24dp"
+            android:fontFamily="@font/roboto_mono_light"
+            android:textColor="@android:color/white"
             app:layout_constraintBottom_toTopOf="@+id/multiply"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/percent"
+            app:layout_constraintStart_toEndOf="@+id/divide"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
@@ -104,19 +114,21 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/nine"
             android:textColor="@android:color/white"
             android:textSize="30sp"
             app:layout_constraintBottom_toTopOf="@+id/six"
             app:layout_constraintEnd_toStartOf="@+id/multiply"
             app:layout_constraintStart_toEndOf="@+id/eight"
-            app:layout_constraintTop_toBottomOf="@+id/percent" />
+            app:layout_constraintTop_toBottomOf="@+id/divide" />
 
         <Button
             android:id="@+id/seven"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/seven"
             android:textColor="@android:color/white"
             android:textSize="30sp"
@@ -130,32 +142,35 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/multiply"
             android:textColor="@android:color/white"
             android:textSize="30sp"
             app:layout_constraintBottom_toTopOf="@+id/subtract"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/nine"
-            app:layout_constraintTop_toBottomOf="@+id/divide" />
+            app:layout_constraintTop_toBottomOf="@+id/backspace" />
 
         <Button
             android:id="@+id/eight"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/eight"
             android:textColor="@android:color/white"
             android:textSize="30sp"
             app:layout_constraintBottom_toTopOf="@+id/five"
             app:layout_constraintEnd_toStartOf="@+id/nine"
             app:layout_constraintStart_toEndOf="@+id/seven"
-            app:layout_constraintTop_toBottomOf="@+id/sign" />
+            app:layout_constraintTop_toBottomOf="@+id/percent" />
 
         <Button
             android:id="@+id/subtract"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/subtract"
             android:textColor="@android:color/white"
             android:textSize="30sp"
@@ -169,6 +184,7 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/five"
             android:textColor="@android:color/white"
             android:textSize="30sp"
@@ -182,6 +198,7 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/four"
             android:textColor="@android:color/white"
             android:textSize="30sp"
@@ -195,6 +212,7 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/six"
             android:textColor="@android:color/white"
             android:textSize="30sp"
@@ -208,6 +226,7 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/one"
             android:textColor="@android:color/white"
             android:textSize="30sp"
@@ -222,6 +241,7 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/plus"
             android:textColor="@android:color/white"
             android:textSize="30sp"
@@ -235,6 +255,7 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/three"
             android:textColor="@android:color/white"
             android:textSize="30sp"
@@ -248,6 +269,7 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/two"
             android:textColor="@android:color/white"
             android:textSize="30sp"
@@ -261,6 +283,7 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/equal"
             android:textColor="@android:color/white"
             android:textSize="30sp"
@@ -275,6 +298,7 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/decimal"
             android:textColor="@android:color/white"
             android:textSize="30sp"
@@ -289,6 +313,7 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fontFamily="@font/roboto_mono_light"
             android:text="@string/zero"
             android:textColor="@android:color/white"
             android:textSize="30sp"
@@ -300,47 +325,6 @@
             app:layout_constraintTop_toBottomOf="@+id/one" />
 
     </android.support.constraint.ConstraintLayout>
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <android.support.constraint.Barrier
-        android:id="@+id/barrier2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="top" />
 
 
 </android.support.constraint.ConstraintLayout>
