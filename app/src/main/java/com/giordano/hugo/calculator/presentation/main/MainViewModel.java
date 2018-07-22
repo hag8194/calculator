@@ -1,5 +1,6 @@
-package com.giordano.hugo.calculator.main;
+package com.giordano.hugo.calculator.presentation.main;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
 
@@ -19,11 +20,11 @@ public class MainViewModel extends ViewModel {
         operationResult.setValue(new StringBuilder());
     }
 
-    public MutableLiveData<StringBuilder> getOperationInput() {
+    public LiveData<StringBuilder> getOperationInput() {
         return operationInput;
     }
 
-    public MutableLiveData<StringBuilder> getOperationResult() {
+    public LiveData<StringBuilder> getOperationResult() {
         return operationResult;
     }
 

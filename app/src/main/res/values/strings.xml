@@ -18,6 +18,7 @@
     <string name="zero" translatable="false">0</string>
     <string name="decimal" translatable="false">.</string>
     <string name="equal" translatable="false">=</string>
+    <string name="backspace">del</string>
 
     <string-array name="numbers">
         <item>@string/zero</item>

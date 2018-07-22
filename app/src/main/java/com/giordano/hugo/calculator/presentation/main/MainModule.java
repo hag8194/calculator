@@ -1,4 +1,4 @@
-package com.giordano.hugo.calculator.main;
+package com.giordano.hugo.calculator.presentation.main;
 
 import android.arch.lifecycle.ViewModelProviders;
 import dagger.Module;

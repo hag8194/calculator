@@ -3,7 +3,7 @@ package com.giordano.hugo.calculator.di;
 import dagger.BindsInstance;
 import dagger.Component;
 import com.giordano.hugo.calculator.CalculatorApplication;
-import com.giordano.hugo.calculator.main.MainComponent;
+import com.giordano.hugo.calculator.presentation.main.MainComponent;
 
 import javax.inject.Singleton;
 

@@ -1,4 +1,4 @@
-package com.giordano.hugo.calculator.main;
+package com.giordano.hugo.calculator.presentation.main;
 
 import android.os.Bundle;
 import android.widget.Button;
