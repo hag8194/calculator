@@ -50,7 +50,7 @@ public class MainViewModel extends ViewModel {
         operationInput.setValue(currentOperationInput);
     }
 
-    public void operate() {
+    public void calculate() {
 
     }
 

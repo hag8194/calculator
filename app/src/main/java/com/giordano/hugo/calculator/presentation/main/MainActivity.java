@@ -62,7 +62,7 @@ public class MainActivity extends BaseActivity {
     @OnClick(R.id.equal)
     public void onEqualButtonClick() {
         Toast.makeText(this,"Operating! " + testo, Toast.LENGTH_SHORT).show();
-        mainViewModel.operate();
+        mainViewModel.calculate();
     }
 
     @Override
